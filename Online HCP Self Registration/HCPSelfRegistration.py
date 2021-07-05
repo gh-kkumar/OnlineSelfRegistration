@@ -20,7 +20,8 @@ FilePath = str(Path().resolve()) + r'\Excel Files\UrlsForProject.xlsx'
 Sheet = 'Portal Urls'
 Url = str(RWDE.ReadData(FilePath, Sheet, 3, 3))
 
-driver = webdriver.Chrome(executable_path=r'C:\Program Files\Application\Browser\chromedriver_win32\chromedriver')
+#driver = webdriver.Chrome(executable_path=r'C:\Program Files\Application\Browser\chromedriver_win32\chromedriver')
+driver = webdriver.Chrome(executable_path = str(Path().resolve()) + '\Browser\chromedriver_win32\chromedriver')
 driver.maximize_window()
 driver.get(Url)
 
